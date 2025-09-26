@@ -1,0 +1,2 @@
+Ho scelto JOINED perché semplifica sia le query polimorfiche sia la gestione delle relazioni.
+Prestito può referenziare direttamente Media con una sola foreign key, mentre Libri e Riviste ereditano i campi comuni senza duplicazioni.
