@@ -129,7 +129,7 @@ public class Application {
                         Periodicita periodicita = Periodicita.valueOf(p);
                         Rivista r = new Rivista(isbn,titolo,anno,pagine,periodicita);
                         mediaDao.save(r);
-                        System.out.println("Aggiunta rivista: " + r.getTitolo());
+
                     } else {
                         System.out.println("Scelta non valida (1 o 2)");
                     }

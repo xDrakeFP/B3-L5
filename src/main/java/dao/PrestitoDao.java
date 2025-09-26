@@ -31,7 +31,7 @@ public List<Prestito> prestitiAttiviPerTessera(int tessera_id) {
         return found;
 }
     public List<Prestito> prestitiScaduti() {
-        List<Prestito> found = em.createNamedQuery("Prestito.scaduti",Prestito.class).setParameter("tessera",LocalDate.now()).getResultList();
+        List<Prestito> found = em.createNamedQuery("Prestito.scaduti",Prestito.class).setParameter("data",LocalDate.now()).getResultList();
         return found;
     }
 
