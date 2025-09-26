@@ -9,7 +9,7 @@ import java.util.UUID;
 @Table
 @Inheritance(strategy = InheritanceType.JOINED)
 @DiscriminatorColumn(name = "media_type")
-public class Media {
+public abstract class Media {
     @Id
     @GeneratedValue
     @Column
@@ -70,5 +70,16 @@ public class Media {
 
     public void setNumeroPagine(Integer numeroPagine) {
         this.numeroPagine = numeroPagine;
+    }
+
+    @Override
+    public String toString() {
+        return "Media{" +
+                "id=" + id +
+                ", isbn='" + isbn + '\'' +
+                ", titolo='" + titolo + '\'' +
+                ", annoPubblicazione=" + annoPubblicazione +
+                ", numeroPagine=" + numeroPagine +
+                '}';
     }
 }

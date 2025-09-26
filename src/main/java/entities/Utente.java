@@ -70,4 +70,15 @@ public class Utente {
     public void setNumeroTessera(Integer numeroTessera) {
         this.numeroTessera = numeroTessera;
     }
+
+    @Override
+    public String toString() {
+        return "Utente{" +
+                "id=" + id +
+                ", nome='" + nome + '\'' +
+                ", surname='" + surname + '\'' +
+                ", dataNascita=" + dataNascita +
+                ", numeroTessera=" + numeroTessera +
+                '}';
+    }
 }

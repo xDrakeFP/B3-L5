@@ -37,4 +37,12 @@ public class Libro extends Media {
     public void setAutore(String autore) {
         this.autore = autore;
     }
+
+    @Override
+    public String toString() {
+        return "Libro{" +
+                "autore='" + autore + '\'' +
+                ", genere='" + genere + '\'' +
+                "} " + super.toString();
+    }
 }

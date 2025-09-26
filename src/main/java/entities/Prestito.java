@@ -8,7 +8,7 @@ import java.util.UUID;
 @NamedQueries({
         @NamedQuery(name = "Prestito.attiviPerUtente",
                 query = "select p from Prestito p where p.utente.numeroTessera = :tessera and p.dataRestituzioneEffettiva is null"),
-        @NamedQuery(name = "Prestito.attivi",
+        @NamedQuery(name = "Prestito.scaduti",
                 query = "select p from Prestito p where p.dataRestituzioneEffettiva is null and p.dataRestituzionePrevista < :data")
 })
 
@@ -87,6 +87,18 @@ public class Prestito {
 
     public void setDataRestituzioneEffettiva(LocalDate dataRestituzioneEffettiva) {
         this.dataRestituzioneEffettiva = dataRestituzioneEffettiva;
+    }
+
+    @Override
+    public String toString() {
+        return "Prestito{" +
+                "id=" + id +
+                ", utente=" + utente +
+                ", media=" + media +
+                ", dataInizio=" + dataInizio +
+                ", dataRestituzionePrevista=" + dataRestituzionePrevista +
+                ", dataRestituzioneEffettiva=" + dataRestituzioneEffettiva +
+                '}';
     }
 }
 
